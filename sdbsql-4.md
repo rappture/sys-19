@@ -58,14 +58,15 @@ LIMIT 1;
 > 
 ### Ответ к заданию 4*
 ```sql
-SELECT COUNT(payment.staff_id) AS employee_sales, 
+SELECT CONCAT_WS(" ", staff.first_name, staff.last_name) as employee, COUNT(payment.payment_id) AS employee_sales, 
 CASE
-WHEN COUNT(payment.staff_id) > 8000 
+WHEN COUNT(payment.payment_id) > 8000 
 THEN 'Yes'
 ELSE 'No'
 END AS 'bonus_payment'
 FROM payment
-GROUP BY payment.staff_id;
+JOIN staff ON payment.staff_id = staff.staff_id
+GROUP BY employee;
 ```
 ![](img/sdbsql-4.4.1.png)
 
