@@ -108,7 +108,7 @@
 </details>
 
 ## ✔ Ссылка на репозиторий с файлами проекта
-https://github.com/yuliya8/Diploma-project
+https://github.com/rappture/Diploma-project.git
 
 ## ✔ Информация об операционной системе
 * Проект создан и протестирован на виртуальной машине под управлением операционной системы Debian 11:
